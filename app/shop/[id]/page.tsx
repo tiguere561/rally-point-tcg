@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef, use } from 'react';
 import { cards } from '@/lib/data';
 import CardProduct from '@/components/CardProduct';
 import { useCart } from '@/lib/cart-context';
@@ -8,13 +8,14 @@ import Link from 'next/link';
 import { ChevronLeft, ShoppingCart, Plus, Minus } from 'lucide-react';
 
 interface ProductDetailProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
 export default function ProductDetail({ params }: ProductDetailProps) {
-  const card = cards.find((c) => c.id === params.id);
+  const { id } = use(params);
+  const card = cards.find((c) => c.id === id);
   const [quantity, setQuantity] = useState(1);
   const [added, setAdded] = useState(false);
   const { addToCart } = useCart();
@@ -32,6 +33,14 @@ export default function ProductDetail({ params }: ProductDetailProps) {
     );
   }
 
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
+  }, []);
+
   const handleAddToCart = () => {
     addToCart({
       id: card.id,
@@ -42,7 +51,8 @@ export default function ProductDetail({ params }: ProductDetailProps) {
       image: card.image,
     });
     setAdded(true);
-    setTimeout(() => setAdded(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setAdded(false), 2000);
   };
 
   // Related cards

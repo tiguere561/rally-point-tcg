@@ -21,9 +21,16 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
   // Load cart from localStorage on mount
   useEffect(() => {
-    const savedCart = localStorage.getItem('rally-point-cart');
-    if (savedCart) {
-      setItems(JSON.parse(savedCart));
+    try {
+      const savedCart = localStorage.getItem('rally-point-cart');
+      if (savedCart) {
+        const parsed = JSON.parse(savedCart);
+        if (Array.isArray(parsed)) {
+          setItems(parsed);
+        }
+      }
+    } catch {
+      // Ignore corrupted or unavailable localStorage
     }
     setMounted(true);
   }, []);
@@ -31,7 +38,11 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   // Save cart to localStorage whenever it changes
   useEffect(() => {
     if (mounted) {
-      localStorage.setItem('rally-point-cart', JSON.stringify(items));
+      try {
+        localStorage.setItem('rally-point-cart', JSON.stringify(items));
+      } catch {
+        // Ignore if localStorage is full or unavailable
+      }
     }
   }, [items, mounted]);
 

@@ -31,7 +31,7 @@ export default function FilterSidebar({
   onSortChange,
 }: FilterSidebarProps) {
   return (
-    <div className="bg-dark-card border border-neon-cyan/20 rounded-lg p-6 space-y-6">
+    <div className="relative bg-dark-card border border-neon-cyan/20 rounded-lg p-6 space-y-6">
       {/* Close button for mobile */}
       {onClose && (
         <button

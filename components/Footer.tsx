@@ -82,6 +82,30 @@ export default function Footer() {
                   Lorcana
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/categories/baseball"
+                  className="hover:text-neon-cyan transition-colors"
+                >
+                  Baseball
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/categories/football"
+                  className="hover:text-neon-cyan transition-colors"
+                >
+                  Football
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/categories/basketball"
+                  className="hover:text-neon-cyan transition-colors"
+                >
+                  Basketball
+                </Link>
+              </li>
             </ul>
           </div>
 

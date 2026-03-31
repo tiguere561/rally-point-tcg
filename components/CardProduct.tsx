@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Card } from '@/lib/types';
 import { useCart } from '@/lib/cart-context';
 import { ShoppingCart } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 interface CardProductProps {
   card: Card;
@@ -13,6 +13,13 @@ interface CardProductProps {
 export default function CardProduct({ card }: CardProductProps) {
   const { addToCart } = useCart();
   const [added, setAdded] = useState(false);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
+  }, []);
 
   const handleAddToCart = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -25,7 +32,8 @@ export default function CardProduct({ card }: CardProductProps) {
       image: card.image,
     });
     setAdded(true);
-    setTimeout(() => setAdded(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setAdded(false), 2000);
   };
 
   return (

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, use } from 'react';
 import { cards, categories } from '@/lib/data';
 import CardProduct from '@/components/CardProduct';
 import FilterSidebar from '@/components/FilterSidebar';
@@ -9,13 +9,14 @@ import Link from 'next/link';
 import { Filter, ChevronLeft } from 'lucide-react';
 
 interface CategoryPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export default function CategoryPage({ params }: CategoryPageProps) {
-  const category = categories.find((c) => c.slug === params.slug);
+  const { slug } = use(params);
+  const category = categories.find((c) => c.slug === slug);
   const [searchQuery, setSearchQuery] = useState('');
   const [minPrice, setMinPrice] = useState(0);
   const [maxPrice, setMaxPrice] = useState(500);

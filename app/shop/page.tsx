@@ -46,20 +46,20 @@ export default function ShopPage() {
     // Sort
     switch (sortBy) {
       case 'newest':
-        result.sort((a, b) => (b.isNew ? 1 : 0) - (a.isNew ? 1 : 0));
+        result.sort((a, b) => (b.isNew ? 1 : 0) - (a.isNew ? 1 : 0) || a.name.localeCompare(b.name));
         break;
       case 'price-low':
-        result.sort((a, b) => a.price - b.price);
+        result.sort((a, b) => a.price - b.price || a.name.localeCompare(b.name));
         break;
       case 'price-high':
-        result.sort((a, b) => b.price - a.price);
+        result.sort((a, b) => b.price - a.price || a.name.localeCompare(b.name));
         break;
       case 'name':
         result.sort((a, b) => a.name.localeCompare(b.name));
         break;
       case 'featured':
       default:
-        result.sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
+        result.sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0) || a.name.localeCompare(b.name));
         break;
     }
 
