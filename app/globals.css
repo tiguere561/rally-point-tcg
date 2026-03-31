@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-dark-bg text-text-primary;
+  }
+}
+
+@layer utilities {
+  .neon-glow-cyan {
+    @apply shadow-neon-cyan-lg;
+  }
+
+  .neon-glow-pink {
+    @apply shadow-neon-pink-lg;
+  }
+
+  .neon-border-cyan {
+    @apply border border-neon-cyan shadow-neon-cyan;
+  }
+
+  .neon-border-purple {
+    @apply border border-neon-purple shadow-neon-purple;
+  }
+
+  .card-glow {
+    @apply transition-all duration-300;
+  }
+
+  .card-glow:hover {
+    @apply shadow-neon-cyan-lg transform scale-105;
+  }
+}
