@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 
 export default function Footer() {
@@ -10,9 +11,18 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <div className="text-lg font-bold mb-4">
-              <span className="text-neon-cyan">RALLY</span>
-              <span className="text-white"> POINT</span>
+            <div className="flex items-center gap-2 mb-4">
+              <Image
+                src="/logo.png"
+                alt="Rally Point TCG"
+                width={32}
+                height={32}
+                className="h-8 w-auto"
+              />
+              <div className="text-lg font-bold">
+                <span className="text-neon-cyan">RALLY</span>
+                <span className="text-white"> POINT</span>
+              </div>
             </div>
             <p className="text-text-secondary text-sm">
               Veteran Owned. Mission Ready. Game On.

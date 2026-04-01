@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { Menu, X, ShoppingCart } from 'lucide-react';
 import { useCart } from '@/lib/cart-context';
@@ -14,7 +15,15 @@ export default function Navbar() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-3">
+            <Image
+              src="/logo.png"
+              alt="Rally Point TCG"
+              width={40}
+              height={40}
+              className="h-10 w-auto"
+              priority
+            />
             <div className="text-xl font-bold">
               <span className="text-neon-cyan">RALLY</span>
               <span className="text-white"> POINT</span>
