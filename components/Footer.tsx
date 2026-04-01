@@ -13,7 +13,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <Image
-                src="/logo.png"
+                src="/logobgremoved.png"
                 alt="Rally Point TCG"
                 width={32}
                 height={32}

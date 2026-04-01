@@ -17,7 +17,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
             <Image
-              src="/logo.png"
+              src="/logobgremoved.png"
               alt="Rally Point TCG"
               width={40}
               height={40}

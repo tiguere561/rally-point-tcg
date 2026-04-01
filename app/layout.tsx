@@ -12,6 +12,10 @@ export const metadata: Metadata = {
   description: 'Buy rare and vintage trading cards from all your favorite games. Pokemon, One Piece, Naruto, and more.',
   keywords: 'trading cards, TCG, Pokemon, One Piece, Naruto, collectibles',
   authors: [{ name: 'Rally Point TCG' }],
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
   openGraph: {
     title: 'Rally Point TCG',
     description: 'Veteran Owned. Mission Ready. Game On.',
