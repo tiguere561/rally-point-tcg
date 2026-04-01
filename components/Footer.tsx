@@ -156,13 +156,13 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center text-text-secondary text-sm">
             <p>&copy; {currentYear} Rally Point TCG. All rights reserved.</p>
             <div className="flex gap-6 mt-4 md:mt-0">
-              <a href="#" className="hover:text-neon-cyan transition-colors">
+              <a href="/privacy.html" className="hover:text-neon-cyan transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="hover:text-neon-cyan transition-colors">
+              <a href="/terms.html" className="hover:text-neon-cyan transition-colors">
                 Terms of Service
               </a>
-              <a href="#" className="hover:text-neon-cyan transition-colors">
+              <a href="mailto:support@rallypointtcg.com" className="hover:text-neon-cyan transition-colors">
                 Contact
               </a>
             </div>
