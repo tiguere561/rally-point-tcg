@@ -31,12 +31,12 @@ export default function FilterSidebar({
   onSortChange,
 }: FilterSidebarProps) {
   return (
-    <div className="relative bg-dark-card border border-neon-cyan/20 rounded-lg p-6 space-y-6">
+    <div className="relative bg-dark-card border border-brand-gold/20 rounded-lg p-6 space-y-6">
       {/* Close button for mobile */}
       {onClose && (
         <button
           onClick={onClose}
-          className="md:hidden absolute top-4 right-4 text-neon-cyan"
+          className="md:hidden absolute top-4 right-4 text-brand-gold"
         >
           <X size={24} />
         </button>
@@ -44,13 +44,13 @@ export default function FilterSidebar({
 
       {/* Sort */}
       <div>
-        <h3 className="font-bold text-neon-cyan mb-4 flex items-center gap-2">
+        <h3 className="font-bold text-brand-gold mb-4 flex items-center gap-2">
           Sort By
         </h3>
         <select
           value={sortBy}
           onChange={(e) => onSortChange(e.target.value)}
-          className="w-full bg-dark-bg border border-neon-cyan/30 rounded px-3 py-2 text-text-secondary focus:border-neon-cyan focus:outline-none"
+          className="w-full bg-dark-bg border border-brand-gold/30 rounded px-3 py-2 text-text-secondary focus:border-brand-gold focus:outline-none"
         >
           <option value="featured">Featured</option>
           <option value="newest">Newest</option>
@@ -62,7 +62,7 @@ export default function FilterSidebar({
 
       {/* Price Range */}
       <div>
-        <h3 className="font-bold text-neon-cyan mb-4">Price Range</h3>
+        <h3 className="font-bold text-brand-gold mb-4">Price Range</h3>
         <div className="space-y-3">
           <div>
             <label className="text-text-secondary text-sm">Min: ${minPrice}</label>
@@ -91,7 +91,7 @@ export default function FilterSidebar({
 
       {/* Categories */}
       <div>
-        <h3 className="font-bold text-neon-cyan mb-4">Game</h3>
+        <h3 className="font-bold text-brand-gold mb-4">Game</h3>
         <div className="space-y-2">
           {CATEGORIES.map((category) => (
             <label key={category} className="flex items-center gap-2 cursor-pointer">
@@ -99,9 +99,9 @@ export default function FilterSidebar({
                 type="checkbox"
                 checked={selectedCategories.includes(category)}
                 onChange={(e) => onCategoryChange(category, e.target.checked)}
-                className="w-4 h-4 rounded accent-neon-cyan"
+                className="w-4 h-4 rounded accent-brand-gold"
               />
-              <span className="text-text-secondary hover:text-neon-cyan transition-colors">
+              <span className="text-text-secondary hover:text-brand-gold transition-colors">
                 {category}
               </span>
             </label>
@@ -111,7 +111,7 @@ export default function FilterSidebar({
 
       {/* Condition */}
       <div>
-        <h3 className="font-bold text-neon-cyan mb-4">Condition</h3>
+        <h3 className="font-bold text-brand-gold mb-4">Condition</h3>
         <div className="space-y-2">
           {CONDITIONS.map((condition) => (
             <label key={condition} className="flex items-center gap-2 cursor-pointer">
@@ -119,9 +119,9 @@ export default function FilterSidebar({
                 type="checkbox"
                 checked={selectedConditions.includes(condition)}
                 onChange={(e) => onConditionChange(condition, e.target.checked)}
-                className="w-4 h-4 rounded accent-neon-cyan"
+                className="w-4 h-4 rounded accent-brand-gold"
               />
-              <span className="text-text-secondary hover:text-neon-cyan transition-colors">
+              <span className="text-text-secondary hover:text-brand-gold transition-colors">
                 {condition}
               </span>
             </label>

@@ -29,7 +29,7 @@ export default function CategoryPage({ params }: CategoryPageProps) {
       <div className="container mx-auto px-4 py-20 text-center">
         <h1 className="text-3xl font-bold text-white mb-4">Category not found</h1>
         <Link href="/shop">
-          <button className="px-6 py-2 bg-neon-cyan text-dark-bg font-bold rounded transition-all">
+          <button className="px-6 py-2 bg-brand-gold text-dark-bg font-bold rounded transition-all">
             Back to Shop
           </button>
         </Link>
@@ -92,15 +92,15 @@ export default function CategoryPage({ params }: CategoryPageProps) {
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Breadcrumb */}
-      <Link href="/shop" className="flex items-center gap-1 text-neon-cyan hover:text-neon-cyan/80 mb-6">
+      <Link href="/shop" className="flex items-center gap-1 text-brand-gold hover:text-brand-gold/80 mb-6">
         <ChevronLeft size={20} />
         Back to Shop
       </Link>
 
       {/* Header */}
-      <div className="mb-10">
+      <div className="text-center mb-10">
         <h1 className="text-4xl font-bold text-white mb-2">
-          <span className="text-neon-cyan">{category.icon}</span> {category.name}
+          <span className="text-brand-gold">{category.icon}</span> {category.name}
         </h1>
         <p className="text-text-secondary mb-4">{category.description}</p>
         <p className="text-text-secondary">
@@ -136,7 +136,7 @@ export default function CategoryPage({ params }: CategoryPageProps) {
         <div className="lg:hidden mb-6 w-full">
           <button
             onClick={() => setShowMobileFilters(!showMobileFilters)}
-            className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-neon-cyan text-dark-bg font-bold rounded transition-all"
+            className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-brand-gold text-dark-bg font-bold rounded transition-all"
           >
             <Filter size={20} />
             {showMobileFilters ? 'Hide Filters' : 'Show Filters'}
@@ -181,7 +181,7 @@ export default function CategoryPage({ params }: CategoryPageProps) {
                   setMinPrice(0);
                   setMaxPrice(500);
                 }}
-                className="px-6 py-2 border border-neon-cyan text-neon-cyan hover:bg-neon-cyan/10 rounded transition-all"
+                className="px-6 py-2 border border-brand-gold text-brand-gold hover:bg-brand-gold/10 rounded transition-all"
               >
                 Clear Filters
               </button>

@@ -6,23 +6,19 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-neon-cyan/20 bg-dark-card mt-20">
+    <footer className="border-t border-brand-gold/20 bg-dark-card mt-20">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
+            <div className="mb-4">
               <Image
-                src="/logobgremoved.png"
+                src="/header-logo.png"
                 alt="Rally Point TCG"
-                width={32}
-                height={32}
-                className="h-8 w-auto"
+                width={160}
+                height={45}
+                className="h-10 w-auto"
               />
-              <div className="text-lg font-bold">
-                <span className="text-neon-cyan">RALLY</span>
-                <span className="text-white"> POINT</span>
-              </div>
             </div>
             <p className="text-text-secondary text-sm">
               Veteran Owned. Mission Ready. Game On.
@@ -31,25 +27,25 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-bold text-neon-cyan mb-4">Quick Links</h3>
+            <h3 className="font-bold text-brand-gold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-text-secondary text-sm">
               <li>
-                <Link href="/" className="hover:text-neon-cyan transition-colors">
+                <Link href="/" className="hover:text-brand-gold transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/shop" className="hover:text-neon-cyan transition-colors">
+                <Link href="/shop" className="hover:text-brand-gold transition-colors">
                   Shop
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-neon-cyan transition-colors">
+                <Link href="/about" className="hover:text-brand-gold transition-colors">
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/cart" className="hover:text-neon-cyan transition-colors">
+                <Link href="/cart" className="hover:text-brand-gold transition-colors">
                   Cart
                 </Link>
               </li>
@@ -58,12 +54,12 @@ export default function Footer() {
 
           {/* Categories */}
           <div>
-            <h3 className="font-bold text-neon-cyan mb-4">Categories</h3>
+            <h3 className="font-bold text-brand-gold mb-4">Categories</h3>
             <ul className="space-y-2 text-text-secondary text-sm">
               <li>
                 <Link
                   href="/categories/pokemon"
-                  className="hover:text-neon-cyan transition-colors"
+                  className="hover:text-brand-gold transition-colors"
                 >
                   Pokémon
                 </Link>
@@ -71,7 +67,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/categories/onepiece"
-                  className="hover:text-neon-cyan transition-colors"
+                  className="hover:text-brand-gold transition-colors"
                 >
                   One Piece
                 </Link>
@@ -79,7 +75,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/categories/naruto"
-                  className="hover:text-neon-cyan transition-colors"
+                  className="hover:text-brand-gold transition-colors"
                 >
                   Naruto
                 </Link>
@@ -87,7 +83,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/categories/lorcana"
-                  className="hover:text-neon-cyan transition-colors"
+                  className="hover:text-brand-gold transition-colors"
                 >
                   Lorcana
                 </Link>
@@ -95,7 +91,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/categories/baseball"
-                  className="hover:text-neon-cyan transition-colors"
+                  className="hover:text-brand-gold transition-colors"
                 >
                   Baseball
                 </Link>
@@ -103,7 +99,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/categories/football"
-                  className="hover:text-neon-cyan transition-colors"
+                  className="hover:text-brand-gold transition-colors"
                 >
                   Football
                 </Link>
@@ -111,7 +107,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/categories/basketball"
-                  className="hover:text-neon-cyan transition-colors"
+                  className="hover:text-brand-gold transition-colors"
                 >
                   Basketball
                 </Link>
@@ -121,29 +117,29 @@ export default function Footer() {
 
           {/* Social Media */}
           <div>
-            <h3 className="font-bold text-neon-cyan mb-4">Follow Us</h3>
+            <h3 className="font-bold text-brand-gold mb-4">Follow Us</h3>
             <div className="flex gap-4">
               <a
                 href="#"
-                className="text-text-secondary hover:text-neon-cyan transition-colors"
+                className="text-text-secondary hover:text-brand-gold transition-colors"
               >
                 <Facebook size={20} />
               </a>
               <a
                 href="#"
-                className="text-text-secondary hover:text-neon-cyan transition-colors"
+                className="text-text-secondary hover:text-brand-gold transition-colors"
               >
                 <Twitter size={20} />
               </a>
               <a
                 href="#"
-                className="text-text-secondary hover:text-neon-cyan transition-colors"
+                className="text-text-secondary hover:text-brand-gold transition-colors"
               >
                 <Instagram size={20} />
               </a>
               <a
                 href="#"
-                className="text-text-secondary hover:text-neon-cyan transition-colors"
+                className="text-text-secondary hover:text-brand-gold transition-colors"
               >
                 <Linkedin size={20} />
               </a>
@@ -152,17 +148,17 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-neon-cyan/20 pt-8">
+        <div className="border-t border-brand-gold/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-text-secondary text-sm">
             <p>&copy; {currentYear} Rally Point TCG. All rights reserved.</p>
             <div className="flex gap-6 mt-4 md:mt-0">
-              <a href="/privacy.html" className="hover:text-neon-cyan transition-colors">
+              <a href="/privacy.html" className="hover:text-brand-gold transition-colors">
                 Privacy Policy
               </a>
-              <a href="/terms.html" className="hover:text-neon-cyan transition-colors">
+              <a href="/terms.html" className="hover:text-brand-gold transition-colors">
                 Terms of Service
               </a>
-              <a href="mailto:support@rallypointtcg.com" className="hover:text-neon-cyan transition-colors">
+              <a href="mailto:support@rallypointtcg.com" className="hover:text-brand-gold transition-colors">
                 Contact
               </a>
             </div>

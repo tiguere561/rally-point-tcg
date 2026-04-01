@@ -47,12 +47,12 @@ export default function CardProduct({ card }: CardProductProps) {
           {/* Badges */}
           <div className="absolute top-3 right-3 flex flex-col gap-2">
             {card.featured && (
-              <div className="bg-neon-pink px-3 py-1 rounded text-white text-xs font-bold shadow-neon-pink">
+              <div className="bg-brand-red px-3 py-1 rounded text-white text-xs font-bold shadow-brand-red">
                 FEATURED
               </div>
             )}
             {card.isNew && (
-              <div className="bg-neon-cyan px-3 py-1 rounded text-dark-bg text-xs font-bold shadow-neon-cyan">
+              <div className="bg-brand-gold px-3 py-1 rounded text-dark-bg text-xs font-bold shadow-brand-gold">
                 NEW
               </div>
             )}
@@ -65,7 +65,7 @@ export default function CardProduct({ card }: CardProductProps) {
               className={`flex items-center gap-2 px-4 py-2 rounded-lg font-semibold transition-all ${
                 added
                   ? 'bg-green-500 text-white'
-                  : 'bg-neon-cyan text-dark-bg hover:shadow-neon-cyan-lg'
+                  : 'bg-brand-gold text-dark-bg hover:shadow-brand-gold-lg'
               }`}
             >
               <ShoppingCart size={16} />
@@ -75,18 +75,18 @@ export default function CardProduct({ card }: CardProductProps) {
         </div>
 
         {/* Card Info */}
-        <h3 className="font-bold text-lg text-white group-hover:text-neon-cyan transition-colors line-clamp-2 mb-1">
+        <h3 className="font-bold text-lg text-white group-hover:text-brand-gold transition-colors line-clamp-2 mb-1">
           {card.name}
         </h3>
 
         <p className="text-text-secondary text-sm mb-2">{card.game}</p>
 
         <div className="flex items-center justify-between mb-3">
-          <p className="text-neon-purple text-xs font-semibold">{card.condition}</p>
-          <p className="text-neon-purple text-xs">{card.set}</p>
+          <p className="text-brand-red text-xs font-semibold">{card.condition}</p>
+          <p className="text-brand-red text-xs">{card.set}</p>
         </div>
 
-        <p className="text-2xl font-bold text-neon-pink">${card.price.toFixed(2)}</p>
+        <p className="text-2xl font-bold text-brand-red">${card.price.toFixed(2)}</p>
       </div>
     </Link>
   );

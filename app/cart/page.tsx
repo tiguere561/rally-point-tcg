@@ -17,7 +17,7 @@ export default function CartPage() {
           Looks like you haven't added any cards yet. Time to go on a mission!
         </p>
         <Link href="/shop">
-          <button className="inline-flex items-center gap-2 px-8 py-4 bg-neon-cyan text-dark-bg font-bold rounded-lg hover:shadow-neon-cyan-lg transform hover:scale-105 transition-all">
+          <button className="inline-flex items-center gap-2 px-8 py-4 bg-brand-gold text-dark-bg font-bold rounded-lg hover:shadow-brand-gold-lg transform hover:scale-105 transition-all">
             Continue Shopping <ArrowRight size={20} />
           </button>
         </Link>
@@ -31,23 +31,23 @@ export default function CartPage() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold text-white mb-8">
-        Shopping <span className="text-neon-cyan">Cart</span>
+      <h1 className="text-4xl font-bold text-white mb-8 text-center">
+        Shopping <span className="text-brand-gold">Cart</span>
       </h1>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Cart Items */}
-        <div className="lg:col-span-2 bg-dark-card border border-neon-cyan/20 rounded-lg p-6">
+        <div className="lg:col-span-2 bg-dark-card border border-brand-gold/20 rounded-lg p-6">
           <div className="space-y-6">
             {items.map((item) => (
               <CartItem key={item.id} item={item} />
             ))}
           </div>
 
-          <div className="border-t border-neon-cyan/20 mt-6 pt-6">
+          <div className="border-t border-brand-gold/20 mt-6 pt-6">
             <button
               onClick={() => clearCart()}
-              className="text-neon-pink hover:text-neon-pink/80 text-sm font-semibold transition-colors"
+              className="text-brand-red hover:text-brand-red/80 text-sm font-semibold transition-colors"
             >
               Clear Cart
             </button>
@@ -55,10 +55,10 @@ export default function CartPage() {
         </div>
 
         {/* Order Summary */}
-        <div className="bg-dark-card border border-neon-cyan/20 rounded-lg p-6 h-fit sticky top-20">
+        <div className="bg-dark-card border border-brand-gold/20 rounded-lg p-6 h-fit sticky top-20">
           <h2 className="text-2xl font-bold text-white mb-6">Order Summary</h2>
 
-          <div className="space-y-4 mb-6 pb-6 border-b border-neon-cyan/20">
+          <div className="space-y-4 mb-6 pb-6 border-b border-brand-gold/20">
             <div className="flex justify-between">
               <span className="text-text-secondary">Subtotal</span>
               <span className="text-white font-semibold">${cartTotal.toFixed(2)}</span>
@@ -67,7 +67,7 @@ export default function CartPage() {
               <span className="text-text-secondary">
                 Shipping
                 {estimatedShipping === 0 && (
-                  <span className="text-neon-cyan text-xs ml-1">(FREE)</span>
+                  <span className="text-brand-gold text-xs ml-1">(FREE)</span>
                 )}
               </span>
               <span className="text-white font-semibold">${estimatedShipping.toFixed(2)}</span>
@@ -80,21 +80,21 @@ export default function CartPage() {
 
           <div className="flex justify-between mb-6">
             <span className="text-lg font-bold text-white">Total</span>
-            <span className="text-2xl font-bold text-neon-pink">${finalTotal.toFixed(2)}</span>
+            <span className="text-2xl font-bold text-brand-red">${finalTotal.toFixed(2)}</span>
           </div>
 
-          <button className="w-full px-6 py-4 bg-neon-cyan text-dark-bg font-bold rounded-lg hover:shadow-neon-cyan-lg transform hover:scale-105 transition-all mb-4">
+          <button className="w-full px-6 py-4 bg-brand-gold text-dark-bg font-bold rounded-lg hover:shadow-brand-gold-lg transform hover:scale-105 transition-all mb-4">
             Proceed to Checkout
           </button>
 
           <Link href="/shop">
-            <button className="w-full px-6 py-3 border border-neon-cyan text-neon-cyan hover:bg-neon-cyan/10 font-semibold rounded-lg transition-all">
+            <button className="w-full px-6 py-3 border border-brand-gold text-brand-gold hover:bg-brand-gold/10 font-semibold rounded-lg transition-all">
               Continue Shopping
             </button>
           </Link>
 
           {estimatedShipping > 0 && (
-            <p className="text-neon-cyan text-xs text-center mt-4">
+            <p className="text-brand-gold text-xs text-center mt-4">
               Free shipping on orders over $100!
             </p>
           )}

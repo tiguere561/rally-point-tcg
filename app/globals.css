@@ -1,24 +1,22 @@
 @import "tailwindcss";
 
 @theme {
-  --color-dark-bg: #0a0a0f;
-  --color-dark-surface: #1a1a2e;
-  --color-dark-card: #16162a;
+  --color-dark-bg: #111111;
+  --color-dark-surface: #1a1a1a;
+  --color-dark-card: #1e1e1e;
 
-  --color-neon-cyan: #00f0ff;
-  --color-neon-purple: #b347ff;
-  --color-neon-pink: #ff2d7b;
+  --color-brand-gold: #D4A520;
+  --color-brand-red: #CC2233;
 
   --color-text-primary: #ffffff;
-  --color-text-secondary: #a0a0b8;
+  --color-text-secondary: #9a9a9a;
 
   --font-sans: var(--font-inter);
 
-  --shadow-neon-cyan: 0 0 20px rgba(0, 240, 255, 0.3);
-  --shadow-neon-cyan-lg: 0 0 40px rgba(0, 240, 255, 0.5);
-  --shadow-neon-purple: 0 0 20px rgba(179, 71, 255, 0.3);
-  --shadow-neon-pink: 0 0 20px rgba(255, 45, 123, 0.3);
-  --shadow-neon-pink-lg: 0 0 40px rgba(255, 45, 123, 0.5);
+  --shadow-brand-gold: 0 0 20px rgba(212, 165, 32, 0.25);
+  --shadow-brand-gold-lg: 0 0 40px rgba(212, 165, 32, 0.4);
+  --shadow-brand-red: 0 0 20px rgba(204, 34, 51, 0.25);
+  --shadow-brand-red-lg: 0 0 40px rgba(204, 34, 51, 0.4);
 }
 
 @layer base {
@@ -28,27 +26,11 @@
 }
 
 @layer utilities {
-  .neon-glow-cyan {
-    @apply shadow-neon-cyan-lg;
-  }
-
-  .neon-glow-pink {
-    @apply shadow-neon-pink-lg;
-  }
-
-  .neon-border-cyan {
-    @apply border border-neon-cyan shadow-neon-cyan;
-  }
-
-  .neon-border-purple {
-    @apply border border-neon-purple shadow-neon-purple;
-  }
-
   .card-glow {
     @apply transition-all duration-300;
   }
 
   .card-glow:hover {
-    @apply shadow-neon-cyan-lg transform scale-105;
+    @apply shadow-brand-gold-lg transform scale-105;
   }
 }

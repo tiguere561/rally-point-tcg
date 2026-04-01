@@ -25,7 +25,7 @@ export default function ProductDetail({ params }: ProductDetailProps) {
       <div className="container mx-auto px-4 py-20 text-center">
         <h1 className="text-3xl font-bold text-white mb-4">Card not found</h1>
         <Link href="/shop">
-          <button className="px-6 py-2 bg-neon-cyan text-dark-bg font-bold rounded transition-all">
+          <button className="px-6 py-2 bg-brand-gold text-dark-bg font-bold rounded transition-all">
             Back to Shop
           </button>
         </Link>
@@ -63,7 +63,7 @@ export default function ProductDetail({ params }: ProductDetailProps) {
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Breadcrumb */}
-      <Link href="/shop" className="flex items-center gap-1 text-neon-cyan hover:text-neon-cyan/80 mb-6">
+      <Link href="/shop" className="flex items-center gap-1 text-brand-gold hover:text-brand-gold/80 mb-6">
         <ChevronLeft size={20} />
         Back to Shop
       </Link>
@@ -72,7 +72,7 @@ export default function ProductDetail({ params }: ProductDetailProps) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
         {/* Image */}
         <div
-          className="w-full aspect-[2/3] rounded-lg shadow-neon-cyan-lg"
+          className="w-full aspect-[2/3] rounded-lg shadow-brand-gold-lg"
           style={{ background: card.image }}
         />
 
@@ -80,48 +80,48 @@ export default function ProductDetail({ params }: ProductDetailProps) {
         <div>
           {/* Name and Category */}
           <h1 className="text-4xl font-bold text-white mb-2">{card.name}</h1>
-          <p className="text-neon-purple text-lg mb-6">{card.game}</p>
+          <p className="text-brand-red text-lg mb-6">{card.game}</p>
 
           {/* Price */}
-          <p className="text-5xl font-bold text-neon-pink mb-6">${card.price.toFixed(2)}</p>
+          <p className="text-5xl font-bold text-brand-red mb-6">${card.price.toFixed(2)}</p>
 
           {/* Description */}
           <p className="text-text-secondary mb-8">{card.description}</p>
 
           {/* Details Grid */}
-          <div className="grid grid-cols-2 gap-4 mb-8 bg-dark-card p-6 rounded-lg border border-neon-cyan/20">
+          <div className="grid grid-cols-2 gap-4 mb-8 bg-dark-card p-6 rounded-lg border border-brand-gold/20">
             <div>
               <p className="text-text-secondary text-sm mb-1">Set</p>
               <p className="text-white font-semibold">{card.set}</p>
             </div>
             <div>
               <p className="text-text-secondary text-sm mb-1">Rarity</p>
-              <p className="text-neon-purple font-semibold">{card.rarity}</p>
+              <p className="text-brand-red font-semibold">{card.rarity}</p>
             </div>
             <div>
               <p className="text-text-secondary text-sm mb-1">Condition</p>
-              <p className="text-neon-purple font-semibold">{card.condition}</p>
+              <p className="text-brand-red font-semibold">{card.condition}</p>
             </div>
             <div>
               <p className="text-text-secondary text-sm mb-1">In Stock</p>
-              <p className="text-neon-cyan font-semibold">{card.quantity} available</p>
+              <p className="text-brand-gold font-semibold">{card.quantity} available</p>
             </div>
           </div>
 
           {/* Quantity Selector */}
           <div className="flex items-center gap-4 mb-8">
             <span className="text-white font-semibold">Quantity:</span>
-            <div className="flex items-center gap-2 bg-dark-card border border-neon-cyan/30 rounded">
+            <div className="flex items-center gap-2 bg-dark-card border border-brand-gold/30 rounded">
               <button
                 onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                className="p-2 text-text-secondary hover:text-neon-cyan transition-colors"
+                className="p-2 text-text-secondary hover:text-brand-gold transition-colors"
               >
                 <Minus size={20} />
               </button>
               <span className="w-8 text-center text-white font-semibold">{quantity}</span>
               <button
                 onClick={() => setQuantity(Math.min(card.quantity, quantity + 1))}
-                className="p-2 text-text-secondary hover:text-neon-cyan transition-colors"
+                className="p-2 text-text-secondary hover:text-brand-gold transition-colors"
               >
                 <Plus size={20} />
               </button>
@@ -134,7 +134,7 @@ export default function ProductDetail({ params }: ProductDetailProps) {
             className={`w-full flex items-center justify-center gap-2 px-8 py-4 rounded-lg font-bold text-lg transition-all ${
               added
                 ? 'bg-green-500 text-white'
-                : 'bg-neon-cyan text-dark-bg hover:shadow-neon-cyan-lg transform hover:scale-105'
+                : 'bg-brand-gold text-dark-bg hover:shadow-brand-gold-lg transform hover:scale-105'
             }`}
           >
             <ShoppingCart size={24} />
@@ -143,7 +143,7 @@ export default function ProductDetail({ params }: ProductDetailProps) {
 
           {/* Stock Warning */}
           {card.quantity <= 3 && (
-            <p className="text-neon-pink text-sm mt-4 text-center font-semibold">
+            <p className="text-brand-red text-sm mt-4 text-center font-semibold">
               Only {card.quantity} left in stock!
             </p>
           )}
@@ -153,7 +153,7 @@ export default function ProductDetail({ params }: ProductDetailProps) {
       {/* You Might Also Like */}
       {relatedCards.length > 0 && (
         <section>
-          <h2 className="text-3xl font-bold text-white mb-8">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">
             You Might Also Like
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

@@ -81,9 +81,9 @@ export default function ShopPage() {
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Header */}
-      <div className="mb-10">
+      <div className="text-center mb-10">
         <h1 className="text-4xl font-bold text-white mb-4">
-          <span className="text-neon-cyan">Shop</span> Cards
+          <span className="text-brand-gold">Shop</span> Cards
         </h1>
         <p className="text-text-secondary">
           Showing {filteredCards.length} of {cards.length} cards
@@ -118,7 +118,7 @@ export default function ShopPage() {
         <div className="lg:hidden mb-6 w-full">
           <button
             onClick={() => setShowMobileFilters(!showMobileFilters)}
-            className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-neon-cyan text-dark-bg font-bold rounded transition-all"
+            className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-brand-gold text-dark-bg font-bold rounded transition-all"
           >
             <Filter size={20} />
             {showMobileFilters ? 'Hide Filters' : 'Show Filters'}
@@ -164,7 +164,7 @@ export default function ShopPage() {
                   setMinPrice(0);
                   setMaxPrice(500);
                 }}
-                className="px-6 py-2 border border-neon-cyan text-neon-cyan hover:bg-neon-cyan/10 rounded transition-all"
+                className="px-6 py-2 border border-brand-gold text-brand-gold hover:bg-brand-gold/10 rounded transition-all"
               >
                 Clear Filters
               </button>
