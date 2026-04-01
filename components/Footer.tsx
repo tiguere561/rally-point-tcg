@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Instagram } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -50,27 +50,22 @@ export default function Footer() {
             <Image
               src="/header-logo.png"
               alt="Rally Point TCG"
-              width={280}
-              height={80}
-              className="h-20 md:h-24 w-auto mb-4"
+              width={560}
+              height={160}
+              className="h-40 md:h-48 w-auto mb-4"
             />
             <p className="text-text-secondary text-sm text-center">
               Veteran Owned. Mission Ready. Game On.
             </p>
-            <div className="flex gap-4 mt-4">
-              <a href="#" className="text-text-secondary hover:text-brand-gold transition-colors">
-                <Facebook size={20} />
-              </a>
-              <a href="#" className="text-text-secondary hover:text-brand-gold transition-colors">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="text-text-secondary hover:text-brand-gold transition-colors">
-                <Instagram size={20} />
-              </a>
-              <a href="#" className="text-text-secondary hover:text-brand-gold transition-colors">
-                <Linkedin size={20} />
-              </a>
-            </div>
+            <a
+              href="https://www.instagram.com/rallypointtcg"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-text-secondary hover:text-brand-gold transition-colors mt-4"
+            >
+              <Instagram size={24} />
+              <span className="text-sm">@rallypointtcg</span>
+            </a>
           </div>
 
           {/* Right Links */}
