@@ -15,9 +15,9 @@ export default function HeroSection() {
         <Image
           src="/header-logo.png"
           alt="Rally Point TCG"
-          width={500}
-          height={140}
-          className="mx-auto h-24 md:h-32 lg:h-40 w-auto mb-8"
+          width={900}
+          height={250}
+          className="mx-auto h-48 md:h-64 lg:h-80 w-auto mb-10"
           priority
         />
 
